@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@100;200;300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Laila', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  min-height: 100vh;
+  background-color: #aaa;
+  background-image: url(../elijah-pilchard-oOM3ldJRRoE-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.search-box {
+  display: inline-block;
+  margin: 0 15px;
+  background: #2f3640;
+  border-radius: 40px;
+  padding: 10px;
+  height: 25px;
+  animation: inputanim 2s ease-in-out infinite  alternate;
+}
+
+.input {
+  background: none;
+  border: none;
+  font-size: 17px;
+  padding: 0;
+  width: 0px;
+  transition: 0.8s;
+  outline: none;
+  color: #fff;
+}
+
+@keyframes inputanim {
+  from {
+    transform: scale(1.1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.input::placeholder {
+  color: #e84118;
+}
+
+.btn {
+  color: #e84118;
+  font-size: 16px;
+  height: 40px;
+  width: 20px;
+}
+
+.search-box:hover .input {
+  width: 240px;
+  padding: 0 6px;
+  animation: none;
+}
+
+.container {
+  display: flex;
+  gap: 25px;
+  background-color: #e84118;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.container span {
+  font-weight: 400;
+  font-size: 17px;
+  color: #fff;
+}
+
+.img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 18px;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.myinstagram, .mytelegram, .mygithub {
+  background: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  transition: 0.5s;
+  animation: inputanim 2s ease-in-out infinite  alternate;
+}
+
+.myinstagram a {
+  color: rgb(255, 0, 0);
+}
+
+.mytelegram a {
+  color: blue;
+}
+
+.mygithub a {
+  color: black;
+}
+
+.myinstagram:hover, .mytelegram:hover, 
+.mygithub:hover {
+  box-shadow: 0 0 15px #fff;
+  background: #e64c26;
+}
+
+.hidden {
+  display: none;
+}
