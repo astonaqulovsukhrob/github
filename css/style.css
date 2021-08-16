@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Laila:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Laila', serif;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,6 +27,7 @@ body {
   animation: inputanim 2s ease-in-out infinite  alternate;
 }
 
+
 .input {
   background: none;
   border: none;
@@ -36,6 +37,10 @@ body {
   transition: 0.8s;
   outline: none;
   color: #fff;
+}
+
+.search-box:hover .input{
+  width: 240px;
 }
 
 @keyframes inputanim {
@@ -55,8 +60,10 @@ body {
 .btn {
   color: #e84118;
   font-size: 16px;
-  height: 40px;
   width: 20px;
+  outline: none;
+  background-color: transparent;
+  border: none;
 }
 
 .search-box:hover .input {
@@ -66,9 +73,10 @@ body {
 }
 
 .container {
+  margin: 25px;
   display: flex;
   gap: 25px;
-  background-color: #e84118;
+  background-image: linear-gradient( 105.5deg,  rgba(31,212,248,1) 11%, rgba(218,15,183,1) 74.9% );
   padding: 25px;
   border-radius: 10px;
 }
@@ -76,7 +84,6 @@ body {
 .container span {
   font-weight: 400;
   font-size: 17px;
-  color: #fff;
 }
 
 .img {
@@ -123,9 +130,68 @@ footer {
 .myinstagram:hover, .mytelegram:hover, 
 .mygithub:hover {
   box-shadow: 0 0 15px #fff;
-  background: #e64c26;
+  background: #aaa;
+}
+
+.link {
+  height: 20vh;
+  width: 30vw;
+  overflow-y: scroll;
+}
+
+h3 a {
+  color: #161012;
+  text-decoration: none;
+}
+
+.link::-webkit-scrollbar {
+  width: 0;
 }
 
 .hidden {
   display: none;
+}
+
+@media(max-width: 768px) {
+  .container {
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: #e84118;
+    padding: 25px;
+    border-radius: 10px;
+  }
+
+  .main {
+    text-align: center;
+  }
+
+  .img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 18px;
+  }
+
+  .main {
+    line-height: 1;
+  }
+
+  .link {
+    height: 20vh;
+    width: 50vw;
+    margin: auto;
+    overflow-y: scroll;
+  }
+
+  .search-box:hover .input {
+    width: 150px;
+    padding: 0 6px;
+    animation: none;
+  }
+
+  .hidden {
+    display: none;
+  }
 }
