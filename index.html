@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Github</title>
+  <link rel="=icon" href="github-icon-1.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,23 +16,26 @@
 <body>
 
   <header>
-    <div class="search-box">
-      <input class="input" type="text" name="input-search" id="search" placeholder="Search github...">
-      <i class="fas fa-search btn"></i>
-    </div>
+    <form class="search-box">
+      <input class="input" type="text" name="input-search" id="input" placeholder="Search github..." autocomplete="off">
+      <button class="btn" id="search">
+        <i class="fas fa-search "></i>
+      </button>
+    </form>
   </header>
   <section>
     <div class="container hidden">
-      <div>
-        <img class="img " src="elijah-pilchard-oOM3ldJRRoE-unsplash.jpg" alt="">
+      <div class="main">
+        <img class="img" id="main-img hidden" src="" alt="">
       </div>
-      <div>
-        <h1>SukhrobWeb</h1>
-        <h3 id="bio">👨‍💻| Front-End Web Developer </h3>
-        <span id="followers ">2 followers </span>
-        <span id="follwing">follwing</span>
-        <span id="repos">9repos</span>
-        <div class="link"></div>
+      <div class="main">
+        <h1 id="name"></h1>
+        <h3 id="bio"></h3>
+        <div class="blog"></div>
+        <span id="followers"></span>
+        <span id="repos"></span>
+        <span id="following"></span>
+        <div class="link" id="link"></div>
       </div>
     </div>
   </section>
@@ -54,6 +58,12 @@
     </div>
   </footer>
 
+  <!-- axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+    integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- js -->
+  <script src="app.js"></script>
 </body>
 
 </html>
