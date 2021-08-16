@@ -40,10 +40,6 @@ function showResult(useData) {
 };
 
 function getResult(useData) {
-
-  const maine = document.createElement('div'){
-    <div
-  }
   const createH3 = document.createElement('h3');
   blog.appendChild(createH3);
   mainImg.src = useData.data.avatar_url;
